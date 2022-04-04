@@ -38,5 +38,15 @@ bootstrap();
 
 // we are returning string
 // return this.appService.getHello();
-// it returns the body only instead res.send or res.json()
+// * it returns the body only instead res.send or res.json()
 // nestjs takes care of the other automatically
+// * nestjs automatically infers that this is text and set on 
+// it's own content type header
+
+// constructor(private readonly exampleService: ExampleService) {}
+// readonly
+// readonly exampleService: ExampleService
+// means that you will never replace product service
+// which we of course don't plan to do
+
+// imports is nestjs feature

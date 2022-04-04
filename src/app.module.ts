@@ -12,6 +12,9 @@ import { PathBothInControllerAndGetController } from './03-path-both-in-controll
 import { PathBothInControllerAndGetService } from './03-path-both-in-controller-and-get/03-path-both-in-controller-and-get.service';
 // 04
 import { ModuleLevelFirstModule } from './04-module-level-1/04-module-level-1.module';
+// 05
+import { HeaderDecoratorController } from './05-header-decorator/05-header-decorator.controller';
+
 
 @Module({
   imports: [ModuleLevelFirstModule],
@@ -20,6 +23,7 @@ import { ModuleLevelFirstModule } from './04-module-level-1/04-module-level-1.mo
     EmptyRouteController,
     PathInGetDecoratorController,
     PathBothInControllerAndGetController,
+    HeaderDecoratorController,
 
   ],
   providers: [
