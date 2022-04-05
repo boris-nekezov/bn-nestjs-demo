@@ -14,10 +14,15 @@ import { PathBothInControllerAndGetService } from './03-path-both-in-controller-
 import { ModuleLevelFirstModule } from './04-module-level-1/04-module-level-1.module';
 // 05
 import { HeaderDecoratorController } from './05-header-decorator/05-header-decorator.controller';
+// 06
+import { ProductsModule } from './06-cars-api/06-cars-api.module';
 
 
 @Module({
-  imports: [ModuleLevelFirstModule],
+  imports: [
+    ModuleLevelFirstModule,
+    ProductsModule
+  ],
   controllers: [
     AppController, 
     EmptyRouteController,
