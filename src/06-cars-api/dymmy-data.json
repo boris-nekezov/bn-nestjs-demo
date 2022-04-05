@@ -1,14 +1,30 @@
 {
-  "id": "Mercedes-Benz",
-  "brand": "Mercedes-Benz",
-  "model": "M-class",
-  "generation": "M-class (W164)",
-  "Modification": "ML 500 (388 Hp) 4Matic",
-  "startOfProduction": 2007,
-  "endOfProduction": 2008,
-  "powertrainArchitecture": "Internal Combustion engine", 
-  "bodyType": "SUV",
-  "seats": 5,
-  "door": 5,
-  "accelerationZeroToHundredKmH": "5.8 sec"
+  "cars": [
+    {
+      "brand": "Mercedes-Benz",
+      "model": "M-class",
+      "generation": "M-class (W164)",
+      "Modification": "ML 500 (388 Hp) 4Matic",
+      "startOfProduction": 2007,
+      "endOfProduction": 2008,
+      "powertrainArchitecture": "Internal Combustion engine", 
+      "bodyType": "SUV",
+      "seats": 5,
+      "door": 5,
+      "accelerationZeroToHundredKmH": "5.8 sec"
+    },
+    {
+      "brand": "BMW",
+      "model": "X5",
+      "generation": "X5 (E70)",
+      "Modification": "48i (355 Hp) xDrive Automatic",
+      "startOfProduction": 2007,
+      "endOfProduction": 2010,
+      "powertrainArchitecture": "Internal Combustion engine", 
+      "bodyType": "SUV",
+      "seats": 5,
+      "door": 5,
+      "accelerationZeroToHundredKmH": "6.5 sec"
+    }
+  ]
 }

@@ -1,4 +1,4 @@
-import { Controller, Post, Body } from '@nestjs/common';
+import { Controller, Post, Get, Body, } from '@nestjs/common';
 import { CarsApiService } from './06-cars-api.service';
 
 @Controller('cars-api')
@@ -32,6 +32,12 @@ export class CarsApiController {
       carDoor,
       carAccelerationZeroToHundredKmH,
     );
+    
     return { id: generatedId}; 
+  }
+
+  @Get()
+  getAllCars() {
+    return this.carsApiService.getCars();
   }
 }

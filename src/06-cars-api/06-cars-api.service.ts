@@ -38,4 +38,8 @@ export class CarsApiService {
     this.cars.push(newCar);
     return carId;
   }
+
+  getCars() {
+    return [...this.cars];
+  }
 }
