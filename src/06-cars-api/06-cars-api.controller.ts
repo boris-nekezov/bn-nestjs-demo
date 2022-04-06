@@ -1,4 +1,4 @@
-import { Controller, Post, Get, Patch, Body, Param } from '@nestjs/common';
+import { Controller, Post, Get, Patch, Delete, Body, Param } from '@nestjs/common';
 import { CarsApiService } from './06-cars-api.service';
 
 @Controller('cars')
@@ -76,5 +76,11 @@ export class CarsApiController {
       carAccelerationZeroToHundredKmH,
     )
     return null; // cause we don't have to return anything else
+  }
+
+  @Delete(':id')
+  removeCar(@Param('id') carId: string) {
+    this.carsApiService.deleteCar(carId);
+    return null;
   }
 }

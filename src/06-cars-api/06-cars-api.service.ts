@@ -107,6 +107,11 @@ export class CarsApiService {
     this.cars[index] = updatedCar;
   }
 
+  deleteCar(carId: string) {
+    const index = this.findCar(carId)[1];
+    this.cars.splice(index, 1);
+  }
+
   private findCar(id: string): [CarsApiModel, number] {
     const carIndex = this.cars.findIndex((car) => car.id === id);
     const car = this.cars[carIndex];
