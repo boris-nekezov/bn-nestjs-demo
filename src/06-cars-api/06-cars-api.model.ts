@@ -4,7 +4,7 @@ export class CarsApiModel {
     public brand: string,
     public model: string,
     public generation: string,
-    public Modification: string,
+    public modification: string,
     public startOfProduction: number,
     public endOfProduction: number,
     public powertrainArchitecture: string, 
