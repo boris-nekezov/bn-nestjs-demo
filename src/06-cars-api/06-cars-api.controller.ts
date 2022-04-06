@@ -1,7 +1,7 @@
-import { Controller, Post, Get, Body, } from '@nestjs/common';
+import { Controller, Post, Get, Body, Param } from '@nestjs/common';
 import { CarsApiService } from './06-cars-api.service';
 
-@Controller('cars-api')
+@Controller('cars')
 export class CarsApiController {
   constructor(private readonly carsApiService: CarsApiService) {}
 
@@ -39,5 +39,10 @@ export class CarsApiController {
   @Get()
   getAllCars() {
     return this.carsApiService.getCars();
+  }
+
+  @Get(':id')
+  getCar(@Param('id') prodId: string) {
+    return this.carsApiService.getCarById(prodId)
   }
 }

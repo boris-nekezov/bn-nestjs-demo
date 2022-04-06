@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 
 import { CarsApiModel } from './06-cars-api.model';
 
@@ -36,10 +36,20 @@ export class CarsApiService {
       );
 
     this.cars.push(newCar);
+
     return carId;
   }
 
   getCars() {
     return [...this.cars];
+  }
+
+  getCarById(carId: string) {
+    const car = this.cars.find(car => car.id === carId);
+    if(!car) {
+      throw new NotFoundException('Could not find car.');
+    }
+
+    return {...car};
   }
 }
